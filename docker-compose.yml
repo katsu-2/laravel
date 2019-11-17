@@ -1,7 +1,9 @@
 version: "3"
 services:
   nginx:
-    image: nginx
+    build:
+      context: docker/nginx
+      dockerfile: Dockerfile
     ports:
       # ホスト:コンテナ
       - "8000:81"
